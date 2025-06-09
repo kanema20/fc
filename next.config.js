@@ -7,15 +7,18 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
 
-  // Uncoment to add domain whitelist
-  // images: {
-  //   remotePatterns: [
-  //     {
-  //       protocol: 'https',
-  //       hostname: 'res.cloudinary.com',
-  //     },
-  //   ]
-  // },
+  // Image optimization and cache configuration
+  images: {
+    formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 60, // Cache for 1 minute in dev, longer in production
+    // Uncomment to add domain whitelist for external images
+    // remotePatterns: [
+    //   {
+    //     protocol: 'https',
+    //     hostname: 'res.cloudinary.com',
+    //   },
+    // ],
+  },
 
   webpack(config) {
     // Grab the existing rule that handles SVG imports

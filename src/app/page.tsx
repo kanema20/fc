@@ -126,10 +126,8 @@ export default function AlphaFCPage() {
         </div>
 
         {/* Gray divider */}
-        <div className='absolute bottom-12 md:bottom-16 left-0 right-0 h-px bg-gray-600'></div>
-
         {/* Footer with logo and social links */}
-        <footer className='absolute bottom-0 left-0 right-0 p-4 md:p-6 flex justify-between items-center'>
+        <footer className='absolute bottom-0 left-0 right-0 p-4 md:p-6 flex justify-between items-center bg-black z-40 border-t border-gray-600'>
           <div className='flex items-center space-x-4 md:space-x-8 text-white'>
             <div className='text-lg md:text-xl font-bold'>
               ALPHA<span className='text-green-400'>FC</span>
