@@ -4,6 +4,18 @@ import Head from 'next/head';
 import * as React from 'react';
 import '@/lib/env';
 
+/**
+ * SVGR Support
+ * Caveat: No React Props Type.
+ *
+ * You can override the next-env if the type is important to you
+ * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
+ */
+
+// !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
+// Before you begin editing, follow all comments with `STARTERCONF`,
+// to customize the default configuration.
+
 export default function AlphaFCPage() {
   const [email, setEmail] = React.useState('');
   const [isSubmitting, setIsSubmitting] = React.useState(false);
@@ -58,17 +70,17 @@ export default function AlphaFCPage() {
         }}
       >
         {/* Header */}
-        <header className='absolute top-0 left-0 right-0 p-6 flex justify-between items-center'>
-          <div className='text-white text-xl font-bold'>
+        <header className='absolute top-0 left-0 right-0 p-4 md:p-6 flex justify-between items-center'>
+          <div className='text-white text-lg md:text-xl font-bold'>
             ALPHA<span className='text-green-400'>FC</span>
           </div>
         </header>
 
         {/* Main content */}
-        <div className='flex items-center min-h-screen px-12 pt-[20vh]'>
-          <div className='max-w-2xl'>
+        <div className='flex items-center min-h-screen px-4 md:px-12 pt-[15vh] md:pt-[20vh]'>
+          <div className='max-w-2xl w-full'>
             {/* Main heading */}
-            <h1 className='text-white text-6xl font-light leading-tight mb-8'>
+            <h1 className='text-white text-4xl md:text-6xl font-light leading-tight mb-6 md:mb-8'>
               Redefine club
               <br />
               ownership with
@@ -79,29 +91,31 @@ export default function AlphaFCPage() {
             </h1>
 
             {/* Subheading */}
-            <div className='text-white text-xl mb-2'>Become a GM.</div>
-            <div className='text-white text-xl mb-2'>
+            <div className='text-white text-lg md:text-xl mb-2'>
+              Become a GM.
+            </div>
+            <div className='text-white text-lg md:text-xl mb-2'>
               Dictate the future of your team.
             </div>
-            <div className='text-white text-xl mb-12'>
+            <div className='text-white text-lg md:text-xl mb-8 md:mb-12'>
               Create your own dynasty.
             </div>
 
             {/* Email input and button */}
             <form onSubmit={handleSubmit} className='mb-4'>
-              <div className='flex items-center space-x-1'>
+              <div className='flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-1'>
                 <input
                   type='email'
                   placeholder='jdoe@example.com'
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   disabled={isSubmitting}
-                  className='bg-gray-800 text-white px-6 py-4 rounded-none border border-gray-600 focus:outline-none focus:border-green-400 text-lg w-80 disabled:opacity-50'
+                  className='bg-gray-800 text-white px-4 md:px-6 py-3 md:py-4 rounded-none border border-gray-600 focus:outline-none focus:border-green-400 text-base md:text-lg w-full sm:w-80 disabled:opacity-50'
                 />
                 <button
                   type='submit'
                   disabled={isSubmitting}
-                  className='bg-green-400 text-black px-8 py-4 font-semibold text-lg hover:bg-green-300 transition-colors flex items-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed'
+                  className='bg-green-400 text-black px-6 md:px-8 py-3 md:py-4 font-semibold text-base md:text-lg hover:bg-green-300 transition-colors flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap'
                 >
                   <span>{isSubmitting ? 'Joining...' : 'Join the team'}</span>
                   <span>→</span>
@@ -123,18 +137,18 @@ export default function AlphaFCPage() {
         </div>
 
         {/* Gray divider */}
-        <div className='absolute bottom-16 left-0 right-0 h-px bg-gray-600'></div>
+        <div className='absolute bottom-12 md:bottom-16 left-0 right-0 h-px bg-gray-600'></div>
 
         {/* Footer with logo and social links */}
-        <footer className='absolute bottom-0 left-0 right-0 p-6 flex justify-between items-center'>
-          <div className='flex items-center space-x-8 text-white'>
-            <div className='text-xl font-bold'>
+        <footer className='absolute bottom-0 left-0 right-0 p-4 md:p-6 flex justify-between items-center'>
+          <div className='flex items-center space-x-4 md:space-x-8 text-white'>
+            <div className='text-lg md:text-xl font-bold'>
               ALPHA<span className='text-green-400'>FC</span>
             </div>
-            <span className='cursor-pointer hover:text-green-400 transition-colors'>
+            <span className='cursor-pointer hover:text-green-400 transition-colors text-sm md:text-base'>
               X
             </span>
-            <span className='cursor-pointer hover:text-green-400 transition-colors'>
+            <span className='cursor-pointer hover:text-green-400 transition-colors text-sm md:text-base'>
               Telegram
             </span>
           </div>
@@ -142,7 +156,7 @@ export default function AlphaFCPage() {
 
         {/* Soccer field overlay pattern */}
         <div className='absolute inset-0 pointer-events-none'>
-          <div className='w-full h-full opacity-20'>
+          <div className='w-full h-full opacity-10 md:opacity-20'>
             {/* Grid pattern */}
             <div
               className='w-full h-full'
@@ -151,16 +165,16 @@ export default function AlphaFCPage() {
                   linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
                   linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
                 `,
-                backgroundSize: '40px 40px',
+                backgroundSize: '30px 30px md:40px 40px',
               }}
             />
           </div>
         </div>
 
-        {/* Soccer balls decoration */}
-        <div className='absolute bottom-20 right-40 w-16 h-16 bg-white rounded-full opacity-80'></div>
-        <div className='absolute bottom-32 right-60 w-12 h-12 bg-white rounded-full opacity-60'></div>
-        <div className='absolute top-1/3 right-20 w-10 h-10 bg-white rounded-full opacity-40'></div>
+        {/* Soccer balls decoration - hidden on mobile */}
+        <div className='hidden md:block absolute bottom-20 right-40 w-16 h-16 bg-white rounded-full opacity-80'></div>
+        <div className='hidden md:block absolute bottom-32 right-60 w-12 h-12 bg-white rounded-full opacity-60'></div>
+        <div className='hidden md:block absolute top-1/3 right-20 w-10 h-10 bg-white rounded-full opacity-40'></div>
       </section>
     </main>
   );
