@@ -29,6 +29,15 @@
 }
 
 @layer base {
+  /* Set Input Sans Narrow as the default font for the entire application */
+  * {
+    font-family: 'Input Sans Narrow', sans-serif;
+  }
+
+  body {
+    font-family: 'Input Sans Narrow', sans-serif;
+  }
+
   .cursor-newtab {
     cursor: url('/images/new-tab.png') 10 10, pointer;
   }
@@ -36,36 +45,37 @@
   /* #region  /**=========== Typography =========== */
   .h0 {
     @apply font-primary text-3xl font-bold md:text-5xl;
-    font-family: 'PT Sans Narrow', sans-serif;
+    font-family: 'Input Sans Narrow', sans-serif;
   }
 
   h1,
   .h1 {
     @apply font-primary text-2xl font-bold md:text-4xl;
-    font-family: 'PT Sans Narrow', sans-serif;
+    font-family: 'Input Sans Narrow', sans-serif;
   }
 
   h2,
   .h2 {
     @apply font-primary text-xl font-bold md:text-3xl;
-    font-family: 'PT Sans Narrow', sans-serif;
+    font-family: 'Input Sans Narrow', sans-serif;
   }
 
   h3,
   .h3 {
     @apply font-primary text-lg font-bold md:text-2xl;
-    font-family: 'PT Sans Narrow', sans-serif;
+    font-family: 'Input Sans Narrow', sans-serif;
   }
 
   h4,
   .h4 {
     @apply font-primary text-base font-bold md:text-lg;
+    font-family: 'Input Sans Narrow', sans-serif;
   }
 
   body,
   .p {
     @apply font-primary text-sm md:text-base;
-    font-family: 'PT Sans Narrow', sans-serif;
+    font-family: 'Input Sans Narrow', sans-serif;
   }
   /* #endregion  /**======== Typography =========== */
 

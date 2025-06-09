@@ -3,7 +3,6 @@
 import Head from 'next/head';
 import * as React from 'react';
 import '@/lib/env';
-import '@fontsource/pt-sans-narrow';
 
 export default function AlphaFCPage() {
   const [email, setEmail] = React.useState('');

@@ -56,6 +56,9 @@ export default function RootLayout({
 }) {
   return (
     <html>
+      <head>
+        <link rel='stylesheet' href='https://use.typekit.net/zpa5fez.css' />
+      </head>
       <body>{children}</body>
     </html>
   );
