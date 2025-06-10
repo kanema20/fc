@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import * as React from 'react';
 
 import '@/styles/globals.css';
+import '@/styles/fonts.css';
 // !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
 import '@/styles/colors.css';
 
@@ -57,7 +58,7 @@ export default function RootLayout({
   return (
     <html>
       <head>
-        <link rel='stylesheet' href='https://use.typekit.net/zpa5fez.css' />
+        <link rel='icon' href='/favicon.ico' />
       </head>
       <body>{children}</body>
     </html>

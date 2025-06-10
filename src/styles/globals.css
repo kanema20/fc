@@ -29,13 +29,13 @@
 }
 
 @layer base {
-  /* Set Input Sans Narrow as the default font for the entire application */
+  /* Set InputSansNarrow as the default font for the entire application */
   * {
-    font-family: 'Input Sans Narrow', sans-serif;
+    font-family: 'InputSansNarrow', sans-serif;
   }
 
   body {
-    font-family: 'Input Sans Narrow', sans-serif;
+    font-family: 'InputSansNarrow', sans-serif;
   }
 
   .cursor-newtab {
@@ -45,37 +45,37 @@
   /* #region  /**=========== Typography =========== */
   .h0 {
     @apply font-primary text-3xl font-bold md:text-5xl;
-    font-family: 'Input Sans Narrow', sans-serif;
+    font-family: 'InputSansNarrow', sans-serif;
   }
 
   h1,
   .h1 {
     @apply font-primary text-2xl font-bold md:text-4xl;
-    font-family: 'Input Sans Narrow', sans-serif;
+    font-family: 'InputSansNarrow', sans-serif;
   }
 
   h2,
   .h2 {
     @apply font-primary text-xl font-bold md:text-3xl;
-    font-family: 'Input Sans Narrow', sans-serif;
+    font-family: 'InputSansNarrow', sans-serif;
   }
 
   h3,
   .h3 {
     @apply font-primary text-lg font-bold md:text-2xl;
-    font-family: 'Input Sans Narrow', sans-serif;
+    font-family: 'InputSansNarrow', sans-serif;
   }
 
   h4,
   .h4 {
     @apply font-primary text-base font-bold md:text-lg;
-    font-family: 'Input Sans Narrow', sans-serif;
+    font-family: 'InputSansNarrow', sans-serif;
   }
 
   body,
   .p {
     @apply font-primary text-sm md:text-base;
-    font-family: 'Input Sans Narrow', sans-serif;
+    font-family: 'InputSansNarrow', sans-serif;
   }
   /* #endregion  /**======== Typography =========== */
 
@@ -92,6 +92,83 @@
   /* Class to adjust with sticky footer */
   .min-h-main {
     @apply min-h-[calc(100vh-56px)];
+  }
+
+  /* AlphaFC Page Styles */
+  .alphafc-hero {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url('/images/soccer.png');
+  }
+
+  .alphafc-logo {
+    font-family: 'InputSansNarrow', sans-serif;
+  }
+
+  .alphafc-logo-fc {
+    font-family: 'InputSerifCompressed', sans-serif;
+  }
+
+  .alphafc-email-input {
+    font-family: 'InputSansNarrow', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.16px;
+  }
+
+  .alphafc-email-input::placeholder {
+    font-family: 'InputSansNarrow', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.16px;
+  }
+
+  .alphafc-button {
+    font-family: 'InputSansNarrow', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.16px;
+    display: flex;
+    height: 40px;
+    padding: 23px 16px 23px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+
+  /* Ensure consistent button spacing on mobile */
+  @media (max-width: 640px) {
+    .alphafc-button {
+      padding: 23px 16px 23px 16px;
+      gap: 40px;
+      height: 40px;
+    }
+  }
+
+  .alphafc-social-links {
+    color: #9ca3af; /* light gray */
+  }
+
+  .alphafc-social-links:hover {
+    color: #10b981; /* green-400 on hover */
+  }
+
+  .alphafc-grid-pattern {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.1) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
   }
 }
 

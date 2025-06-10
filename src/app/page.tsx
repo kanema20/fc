@@ -51,16 +51,11 @@ export default function AlphaFCPage() {
       </Head>
 
       {/* Main container with background image */}
-      <section
-        className='min-h-screen bg-cover bg-center bg-no-repeat relative'
-        style={{
-          backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.4)), url('/images/soccer.png')`,
-        }}
-      >
+      <section className='min-h-screen bg-cover bg-center bg-no-repeat relative alphafc-hero'>
         {/* Header */}
         <header className='absolute top-0 left-0 right-0 p-4 md:p-6 flex justify-between items-center'>
-          <div className='text-white text-lg md:text-xl font-bold'>
-            ALPHA<span className='text-green-400'>FC</span>
+          <div className='text-white text-lg md:text-xl font-bold alphafc-logo'>
+            ALPHA<span className='text-green-400 alphafc-logo-fc'>FC</span>
           </div>
         </header>
 
@@ -74,7 +69,7 @@ export default function AlphaFCPage() {
               ownership with
               <br />
               <span className='text-white font-normal'>
-                ALPHA<span className='text-green-400'>FC</span>
+                ALPHA<span className='text-green-400 alphafc-logo-fc'>FC</span>
               </span>
             </h1>
 
@@ -91,22 +86,33 @@ export default function AlphaFCPage() {
 
             {/* Email input and button */}
             <form onSubmit={handleSubmit} className='mb-4'>
-              <div className='flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-1'>
+              <div className=' flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-1'>
                 <input
                   type='email'
                   placeholder='jdoe@example.com'
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   disabled={isSubmitting}
-                  className='bg-gray-800 text-white px-4 md:px-6 py-3 md:py-4 rounded-none border border-gray-600 border-b-gray-400 focus:outline-none focus:border-green-400 focus:border-b-green-400 text-base md:text-lg w-full sm:w-80 disabled:opacity-50'
+                  className='alphafc-email-input bg-gray-800 text-white px-4 md:px-6 py-2.5 md:py-3 rounded-none border border-gray-600 border-b-gray-400 focus:outline-none focus:border-green-400 focus:border-b-green-400 w-full sm:w-72 disabled:opacity-50'
                 />
                 <button
                   type='submit'
                   disabled={isSubmitting}
-                  className='bg-green-400 text-black px-6 md:px-8 py-3 md:py-4 font-semibold text-base md:text-lg hover:bg-green-300 transition-colors flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap'
+                  className='bg-green-400 text-black hover:bg-green-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap alphafc-button'
                 >
                   <span>{isSubmitting ? 'Joining...' : 'Join the team'}</span>
-                  <span>→</span>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='16'
+                    height='16'
+                    viewBox='0 0 16 16'
+                    fill='none'
+                  >
+                    <path
+                      d='M9 3L8.285 3.6965L12.075 7.5H2V8.5H12.075L8.285 12.2865L9 13L14 8L9 3Z'
+                      fill='#161616'
+                    />
+                  </svg>
                 </button>
               </div>
             </form>
@@ -128,13 +134,13 @@ export default function AlphaFCPage() {
         {/* Footer with logo and social links */}
         <footer className='absolute bottom-0 left-0 right-0 p-4 md:p-6 flex justify-between items-center bg-black z-40 border-t border-gray-600'>
           <div className='flex items-center space-x-4 md:space-x-8 text-white'>
-            <div className='text-lg md:text-xl font-bold'>
-              ALPHA<span className='text-green-400'>FC</span>
+            <div className='text-lg md:text-xl font-bold alphafc-logo'>
+              ALPHA<span className='text-green-400 alphafc-logo-fc'>FC</span>
             </div>
-            <span className='cursor-pointer hover:text-green-400 transition-colors text-sm md:text-base'>
+            <span className='cursor-pointer transition-colors text-sm md:text-base alphafc-social-links'>
               X
             </span>
-            <span className='cursor-pointer hover:text-green-400 transition-colors text-sm md:text-base'>
+            <span className='cursor-pointer transition-colors text-sm md:text-base alphafc-social-links'>
               Telegram
             </span>
           </div>
@@ -144,16 +150,7 @@ export default function AlphaFCPage() {
         <div className='absolute inset-0 pointer-events-none'>
           <div className='w-full h-full opacity-10 md:opacity-20'>
             {/* Grid pattern */}
-            <div
-              className='w-full h-full'
-              style={{
-                backgroundImage: `
-                  linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-                  linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
-                `,
-                backgroundSize: '30px 30px',
-              }}
-            />
+            <div className='w-full h-full alphafc-grid-pattern' />
           </div>
         </div>
 
