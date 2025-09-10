@@ -6,7 +6,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        primary: [...defaultTheme.fontFamily.sans],
+        primary: ['Inter', ...defaultTheme.fontFamily.sans],
+        inter: ['Inter', ...defaultTheme.fontFamily.sans],
+        spacemono: ['Space Mono', ...defaultTheme.fontFamily.mono],
+        pixelify: ['Pixelify Sans', ...defaultTheme.fontFamily.sans],
+        pressstart: ['Press Start 2P', ...defaultTheme.fontFamily.mono],
       },
       colors: {
         primary: {

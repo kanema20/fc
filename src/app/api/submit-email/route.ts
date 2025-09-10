@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
     const emailSignup = await prisma.emailSignup.create({
       data: {
         email: email.toLowerCase().trim(),
-        source: 'alphafc_landing',
+        source: 'cakeshop_landing',
       },
     });
 

@@ -60,5 +60,5 @@ The `EmailSignup` model will create a table with:
 
 - `id` (auto-increment primary key)
 - `email` (unique string)
-- `source` (string, defaults to "alphafc_landing")
+- `source` (string, defaults to "cakeshop_landing")
 - `created_at` (timestamp)

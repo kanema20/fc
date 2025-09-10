@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { Inter, Press_Start_2P,Space_Mono } from 'next/font/google';
 import * as React from 'react';
 
 import '@/styles/globals.css';
@@ -7,6 +8,24 @@ import '@/styles/fonts.css';
 import '@/styles/colors.css';
 
 import { siteConfig } from '@/constant/config';
+
+const spaceMono = Space_Mono({ 
+  subsets: ['latin'], 
+  weight: ['400', '700'],
+  variable: '--font-space-mono'
+});
+
+const inter = Inter({ 
+  subsets: ['latin'], 
+  weight: ['400', '500', '600'],
+  variable: '--font-inter'
+});
+
+const pressStart2P = Press_Start_2P({ 
+  subsets: ['latin'], 
+  weight: '400',
+  variable: '--font-press-start'
+});
 
 // !STARTERCONF Change these default meta
 // !STARTERCONF Look at @/constant/config to change them
@@ -18,13 +37,6 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   robots: { index: true, follow: true },
-  // !STARTERCONF this is the default favicon, you can generate your own from https://realfavicongenerator.net/
-  // ! copy to /favicon folder
-  icons: {
-    icon: '/favicon/favicon.ico',
-    shortcut: '/favicon/favicon-16x16.png',
-    apple: '/favicon/apple-touch-icon.png',
-  },
   manifest: `/favicon/site.webmanifest`,
   openGraph: {
     url: siteConfig.url,
@@ -58,7 +70,12 @@ export default function RootLayout({
   return (
     <html>
       <head>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link 
+          href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap" 
+          rel="stylesheet" 
+        />
       </head>
       <body>{children}</body>
     </html>

@@ -29,13 +29,18 @@
 }
 
 @layer base {
-  /* Set InputSansNarrow as the default font for the entire application */
+  /* Set Space Mono as the default font for the entire application */
   * {
-    font-family: 'InputSansNarrow', sans-serif;
+    font-family: 'Space Mono', monospace !important;
+    color: #667eea;
   }
 
   body {
-    font-family: 'InputSansNarrow', sans-serif;
+    font-family: 'Space Mono', monospace !important;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #667eea;
   }
 
   .cursor-newtab {
@@ -43,39 +48,104 @@
   }
 
   /* #region  /**=========== Typography =========== */
+  /* Default Text: 16px, line-height 24px */
+  .text-default {
+    font-family: 'Space Mono', monospace;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #667eea;
+  }
+
+  /* Title: 32px, bold, line-height 32px */
+  .text-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #667eea;
+  }
+
+  /* Subtitle: 20px, bold */
+  .text-subtitle {
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #667eea;
+  }
+
+  /* Default Semibold: 16px, 600 weight */
+  .text-default-semibold {
+    font-family: 'Space Mono', monospace;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #667eea;
+  }
+
+  /* Link: 16px, color #667eea */
+  .text-link {
+    font-family: 'Space Mono', monospace;
+    font-size: 16px;
+    line-height: 24px;
+    color: #667eea;
+    text-decoration: none;
+  }
+
+  .text-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Monospace font for crypto/technical elements */
+  .text-mono {
+    font-family: 'Space Mono', monospace;
+  }
+
+  /* Pixel font */
+  .text-pixel {
+    font-family: 'Pixelify Sans', sans-serif;
+  }
+
+  /* Retro gaming font */
+  .text-retro {
+    font-family: 'Press Start 2P', cursive;
+  }
+
+  /* Legacy heading styles updated */
   .h0 {
-    @apply font-primary text-3xl font-bold md:text-5xl;
-    font-family: 'InputSansNarrow', sans-serif;
+    @apply font-spacemono text-3xl font-bold md:text-5xl;
+    color: #667eea;
   }
 
   h1,
   .h1 {
-    @apply font-primary text-2xl font-bold md:text-4xl;
-    font-family: 'InputSansNarrow', sans-serif;
+    @apply font-spacemono text-2xl font-bold md:text-4xl;
+    color: #667eea;
   }
 
   h2,
   .h2 {
-    @apply font-primary text-xl font-bold md:text-3xl;
-    font-family: 'InputSansNarrow', sans-serif;
+    @apply font-spacemono text-xl font-bold md:text-3xl;
+    color: #667eea;
   }
 
   h3,
   .h3 {
-    @apply font-primary text-lg font-bold md:text-2xl;
-    font-family: 'InputSansNarrow', sans-serif;
+    @apply font-spacemono text-lg font-bold md:text-2xl;
+    color: #667eea;
   }
 
   h4,
   .h4 {
-    @apply font-primary text-base font-bold md:text-lg;
-    font-family: 'InputSansNarrow', sans-serif;
+    @apply font-spacemono text-base font-bold md:text-lg;
+    color: #667eea;
   }
 
   body,
   .p {
-    @apply font-primary text-sm md:text-base;
-    font-family: 'InputSansNarrow', sans-serif;
+    @apply font-spacemono text-sm md:text-base;
+    color: #667eea;
   }
   /* #endregion  /**======== Typography =========== */
 
@@ -105,15 +175,17 @@
   }
 
   .alphafc-logo {
-    font-family: 'InputSansNarrow', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
   }
 
   .alphafc-logo-fc {
-    font-family: 'InputSerifCompressed', sans-serif;
+    font-family: 'Press Start 2P', cursive !important;
+    font-size: 0.9em;
   }
 
   .alphafc-email-input {
-    font-family: 'InputSansNarrow', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -122,7 +194,7 @@
   }
 
   .alphafc-email-input::placeholder {
-    font-family: 'InputSansNarrow', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -131,10 +203,10 @@
   }
 
   .alphafc-button {
-    font-family: 'InputSansNarrow', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 14px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 20px;
     letter-spacing: 0.16px;
     display: flex;

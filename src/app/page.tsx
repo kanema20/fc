@@ -1,6 +1,6 @@
 'use client';
-
 import Head from 'next/head';
+import Image from 'next/image';
 import * as React from 'react';
 import '@/lib/env';
 
@@ -47,44 +47,44 @@ export default function AlphaFCPage() {
   return (
     <main>
       <Head>
-        <title>ALPHAFC</title>
+        <title>Cakeshop</title>
       </Head>
 
-      {/* Main container with background image */}
-      <section className='min-h-screen bg-cover bg-center bg-no-repeat relative alphafc-hero'>
+      {/* Main container */}
+      <section className='min-h-screen relative' style={{backgroundColor: '#1a1a1a'}}>
         {/* Header */}
         <header className='absolute top-0 left-0 right-0 p-4 md:p-6 flex justify-between items-center'>
-          <div className='text-white text-lg md:text-xl font-bold alphafc-logo'>
-            ALPHA<span className='text-green-400 alphafc-logo-fc'>FC</span>
+          <div className='text-lg md:text-xl font-bold' style={{fontFamily: 'Space Mono, monospace', fontWeight: 700, color: '#667eea'}}>
+            <span style={{fontFamily: 'Press Start 2P, cursive', fontSize: '0.9em', color: '#667eea'}}>Cakeshop</span>
           </div>
         </header>
 
         {/* Main content */}
-        <div className='flex items-center min-h-screen px-4 md:px-12 pt-[15vh] md:pt-[20vh]'>
-          <div className='max-w-2xl w-full'>
+        <div className='flex items-center justify-between min-h-screen px-4 md:px-12 pt-[15vh] md:pt-[20vh]'>
+          <div className='max-w-2xl w-full md:w-1/2'>
             {/* Main heading */}
-            <h1 className='text-white text-4xl md:text-6xl font-light leading-tight mb-6 md:mb-8'>
-              Redefine club
+            <h1 className='text-4xl md:text-6xl font-light leading-tight mb-6 md:mb-8' style={{fontFamily: 'Space Mono, monospace', color: '#667eea'}}>
+              Buying BTC
               <br />
-              ownership with
+              should be as easy as
               <br />
-              <span className='text-white font-normal'>
-                ALPHA<span className='text-green-400 alphafc-logo-fc'>FC</span>
+              <span className='font-normal' style={{fontFamily: 'Space Mono, monospace', color: '#667eea'}}>
+                <span style={{fontFamily: 'Press Start 2P, cursive', fontSize: '0.9em', color: '#ffffff'}}>Cake</span>
               </span>
             </h1>
 
             {/* Subheading */}
-            <div className='text-white text-lg md:text-xl mb-2'>
-              Become a GM.
+            <div className='text-xl font-bold mb-2' style={{fontFamily: 'Space Mono, monospace', fontSize: '20px', fontWeight: 700, color: '#667eea'}}>
+              Buy BTC.
             </div>
-            <div className='text-white text-lg md:text-xl mb-2'>
-              Dictate the future of your team.
+            <div className='text-xl font-bold mb-2' style={{fontFamily: 'Space Mono, monospace', fontSize: '20px', fontWeight: 700, color: '#667eea'}}>
+              Build your savings.
             </div>
-            <div className='text-white text-lg md:text-xl mb-8 md:mb-12'>
-              Create your own dynasty.
+            <div className='text-xl font-bold mb-8 md:mb-12' style={{fontFamily: 'Space Mono, monospace', fontSize: '20px', fontWeight: 700, color: '#667eea'}}>
+              Spend your wealth.
             </div>
 
-            {/* Email input and button */}
+            {/* Email i nput and button */}
             <form onSubmit={handleSubmit} className='mb-4'>
               <div className=' flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-1'>
                 <input
@@ -93,14 +93,16 @@ export default function AlphaFCPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   disabled={isSubmitting}
-                  className='alphafc-email-input bg-gray-800 text-white px-4 md:px-6 py-2.5 md:py-3 rounded-none border border-gray-600 border-b-gray-400 focus:outline-none focus:border-green-400 focus:border-b-green-400 w-full sm:w-72 disabled:opacity-50'
+                  className='bg-white px-4 md:px-6 py-2.5 md:py-3 rounded-none border border-gray-300 focus:outline-none focus:border-purple-500 w-full sm:w-72 disabled:opacity-50'
+                  style={{fontFamily: 'Space Mono, monospace', fontSize: '14px', fontWeight: 400, lineHeight: '20px', letterSpacing: '0.16px', color: '#667eea'}}
                 />
                 <button
                   type='submit'
                   disabled={isSubmitting}
-                  className='bg-green-400 text-black hover:bg-green-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap alphafc-button'
+                  className='text-white hover:opacity-80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap flex h-10 px-4 py-6 justify-center items-center gap-10'
+                  style={{fontFamily: 'Space Mono, monospace', fontSize: '14px', fontWeight: 500, lineHeight: '20px', letterSpacing: '0.16px', backgroundColor: '#667eea', color: '#ffffff'}}
                 >
-                  <span>{isSubmitting ? 'Joining...' : 'Join the team'}</span>
+                  <span style={{color: '#ffffff'}}>{isSubmitting ? 'Getting access...' : 'Get early access'}</span>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='16'
@@ -110,7 +112,7 @@ export default function AlphaFCPage() {
                   >
                     <path
                       d='M9 3L8.285 3.6965L12.075 7.5H2V8.5H12.075L8.285 12.2865L9 13L14 8L9 3Z'
-                      fill='#161616'
+                      fill='#ffffff'
                     />
                   </svg>
                 </button>
@@ -120,13 +122,38 @@ export default function AlphaFCPage() {
             {/* Status message */}
             {message && (
               <p
-                className={`text-sm ${
-                  message.includes('Thanks') ? 'text-green-400' : 'text-red-400'
-                }`}
+                className='text-sm'
+                style={{
+                  fontFamily: 'Space Mono, monospace',
+                  color: message.includes('Thanks') ? '#667eea' : '#ef4444'
+                }}
               >
                 {message}
               </p>
             )}
+          </div>
+
+          {/* iPhone Mockup - Hidden on mobile, visible on desktop */}
+          <div className='hidden md:flex w-1/2 justify-center items-center absolute right-12 top-1/2 transform -translate-y-1/2'>
+            <div className='relative'>
+              {/* iPhone Frame */}
+              <div className='relative bg-black rounded-[3rem] p-2 shadow-2xl'>
+                <div className='bg-black rounded-[2.5rem] overflow-hidden'>
+                  
+                  <Image 
+                    src='/IMG_7374.PNG' 
+                    alt='Cakeshop App Interface'
+                    width={280}
+                    height={600}
+                    className='object-cover rounded-[2.5rem]'
+                  />
+                </div>
+              </div>
+              
+              {/* iPhone Details */}
+              <div className='absolute top-[1.5rem] left-1/2 transform -translate-x-1/2 w-[120px] h-[25px] bg-black rounded-full'></div>
+              <div className='absolute top-[2rem] left-1/2 transform -translate-x-1/2 w-[50px] h-[4px] bg-gray-800 rounded-full'></div>
+            </div>
           </div>
         </div>
 
@@ -134,30 +161,21 @@ export default function AlphaFCPage() {
         {/* Footer with logo and social links */}
         <footer className='absolute bottom-0 left-0 right-0 p-4 md:p-6 flex justify-between items-center bg-black z-40 border-t border-gray-600'>
           <div className='flex items-center space-x-4 md:space-x-8 text-white'>
-            <div className='text-lg md:text-xl font-bold alphafc-logo'>
-              ALPHA<span className='text-green-400 alphafc-logo-fc'>FC</span>
+            <div className='text-lg md:text-xl font-bold' style={{fontFamily: 'Space Mono, monospace', fontWeight: 700, color: '#667eea'}}>
+              <span style={{fontFamily: 'Press Start 2P, cursive', fontSize: '0.9em', color: '#667eea'}}>Cakeshop</span>
             </div>
-            <span className='cursor-pointer transition-colors text-sm md:text-base alphafc-social-links'>
+            <a 
+              href="https://x.com/CakeshopApp" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className='cursor-pointer transition-colors text-sm md:text-base hover:opacity-80' 
+              style={{fontFamily: 'Space Mono, monospace', color: '#ffffff'}}
+            >
               X
-            </span>
-            <span className='cursor-pointer transition-colors text-sm md:text-base alphafc-social-links'>
-              Telegram
-            </span>
+            </a>
           </div>
         </footer>
 
-        {/* Soccer field overlay pattern */}
-        <div className='absolute inset-0 pointer-events-none'>
-          <div className='w-full h-full opacity-10 md:opacity-20'>
-            {/* Grid pattern */}
-            <div className='w-full h-full alphafc-grid-pattern' />
-          </div>
-        </div>
-
-        {/* Soccer balls decoration - hidden on mobile */}
-        <div className='hidden md:block absolute bottom-20 right-40 w-16 h-16 bg-white rounded-full opacity-80'></div>
-        <div className='hidden md:block absolute bottom-32 right-60 w-12 h-12 bg-white rounded-full opacity-60'></div>
-        <div className='hidden md:block absolute top-1/3 right-20 w-10 h-10 bg-white rounded-full opacity-40'></div>
       </section>
     </main>
   );
