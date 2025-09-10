@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Inter, Press_Start_2P,Space_Mono } from 'next/font/google';
+import { Inter, Press_Start_2P, Space_Mono } from 'next/font/google';
 import * as React from 'react';
 
 import '@/styles/globals.css';
@@ -9,22 +9,22 @@ import '@/styles/colors.css';
 
 import { siteConfig } from '@/constant/config';
 
-const spaceMono = Space_Mono({ 
-  subsets: ['latin'], 
+const spaceMono = Space_Mono({
+  subsets: ['latin'],
   weight: ['400', '700'],
-  variable: '--font-space-mono'
+  variable: '--font-space-mono',
 });
 
-const inter = Inter({ 
-  subsets: ['latin'], 
+const inter = Inter({
+  subsets: ['latin'],
   weight: ['400', '500', '600'],
-  variable: '--font-inter'
+  variable: '--font-inter',
 });
 
-const pressStart2P = Press_Start_2P({ 
-  subsets: ['latin'], 
+const pressStart2P = Press_Start_2P({
+  subsets: ['latin'],
   weight: '400',
-  variable: '--font-press-start'
+  variable: '--font-press-start',
 });
 
 // !STARTERCONF Change these default meta
@@ -69,15 +69,11 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link 
-          href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap" 
-          rel="stylesheet" 
-        />
-      </head>
-      <body>{children}</body>
+      <body
+        className={`${spaceMono.variable} ${inter.variable} ${pressStart2P.variable}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

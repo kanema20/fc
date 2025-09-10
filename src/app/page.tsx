@@ -51,11 +51,29 @@ export default function AlphaFCPage() {
       </Head>
 
       {/* Main container */}
-      <section className='min-h-screen relative' style={{backgroundColor: '#1a1a1a'}}>
+      <section
+        className='min-h-screen relative'
+        style={{ backgroundColor: '#1a1a1a' }}
+      >
         {/* Header */}
         <header className='absolute top-0 left-0 right-0 p-4 md:p-6 flex justify-between items-center'>
-          <div className='text-lg md:text-xl font-bold' style={{fontFamily: 'Space Mono, monospace', fontWeight: 700, color: '#667eea'}}>
-            <span style={{fontFamily: 'Press Start 2P, cursive', fontSize: '0.9em', color: '#667eea'}}>Cakeshop</span>
+          <div
+            className='text-lg md:text-xl font-bold'
+            style={{
+              fontFamily: 'Space Mono, monospace',
+              fontWeight: 700,
+              color: '#667eea',
+            }}
+          >
+            <span
+              style={{
+                fontFamily: 'Press Start 2P, cursive',
+                fontSize: '0.9em',
+                color: '#667eea',
+              }}
+            >
+              Cakeshop
+            </span>
           </div>
         </header>
 
@@ -63,24 +81,65 @@ export default function AlphaFCPage() {
         <div className='flex items-center justify-between min-h-screen px-4 md:px-12 pt-[15vh] md:pt-[20vh]'>
           <div className='max-w-2xl w-full md:w-1/2'>
             {/* Main heading */}
-            <h1 className='text-4xl md:text-6xl font-light leading-tight mb-6 md:mb-8' style={{fontFamily: 'Space Mono, monospace', color: '#667eea'}}>
+            <h1
+              className='text-4xl md:text-6xl font-light leading-tight mb-6 md:mb-8'
+              style={{ fontFamily: 'Space Mono, monospace', color: '#667eea' }}
+            >
               Buying BTC
               <br />
               should be as easy as
               <br />
-              <span className='font-normal' style={{fontFamily: 'Space Mono, monospace', color: '#667eea'}}>
-                <span style={{fontFamily: 'Press Start 2P, cursive', fontSize: '0.9em', color: '#ffffff'}}>Cake</span>
+              <span
+                className='font-normal'
+                style={{
+                  fontFamily: 'Space Mono, monospace',
+                  color: '#667eea',
+                }}
+              >
+                <span
+                  style={{
+                    fontFamily: 'Press Start 2P, cursive',
+                    fontSize: '0.9em',
+                    color: '#ffffff',
+                  }}
+                >
+                  Cake
+                </span>
               </span>
             </h1>
 
             {/* Subheading */}
-            <div className='text-xl font-bold mb-2' style={{fontFamily: 'Space Mono, monospace', fontSize: '20px', fontWeight: 700, color: '#667eea'}}>
+            <div
+              className='text-xl font-bold mb-2'
+              style={{
+                fontFamily: 'Space Mono, monospace',
+                fontSize: '20px',
+                fontWeight: 700,
+                color: '#667eea',
+              }}
+            >
               Buy BTC.
             </div>
-            <div className='text-xl font-bold mb-2' style={{fontFamily: 'Space Mono, monospace', fontSize: '20px', fontWeight: 700, color: '#667eea'}}>
+            <div
+              className='text-xl font-bold mb-2'
+              style={{
+                fontFamily: 'Space Mono, monospace',
+                fontSize: '20px',
+                fontWeight: 700,
+                color: '#667eea',
+              }}
+            >
               Build your savings.
             </div>
-            <div className='text-xl font-bold mb-8 md:mb-12' style={{fontFamily: 'Space Mono, monospace', fontSize: '20px', fontWeight: 700, color: '#667eea'}}>
+            <div
+              className='text-xl font-bold mb-8 md:mb-12'
+              style={{
+                fontFamily: 'Space Mono, monospace',
+                fontSize: '20px',
+                fontWeight: 700,
+                color: '#667eea',
+              }}
+            >
               Spend your wealth.
             </div>
 
@@ -94,15 +153,32 @@ export default function AlphaFCPage() {
                   onChange={(e) => setEmail(e.target.value)}
                   disabled={isSubmitting}
                   className='bg-white px-4 md:px-6 py-2.5 md:py-3 rounded-none border border-gray-300 focus:outline-none focus:border-purple-500 w-full sm:w-72 disabled:opacity-50'
-                  style={{fontFamily: 'Space Mono, monospace', fontSize: '14px', fontWeight: 400, lineHeight: '20px', letterSpacing: '0.16px', color: '#667eea'}}
+                  style={{
+                    fontFamily: 'Space Mono, monospace',
+                    fontSize: '14px',
+                    fontWeight: 400,
+                    lineHeight: '20px',
+                    letterSpacing: '0.16px',
+                    color: '#667eea',
+                  }}
                 />
                 <button
                   type='submit'
                   disabled={isSubmitting}
                   className='text-white hover:opacity-80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap flex h-10 px-4 py-6 justify-center items-center gap-10'
-                  style={{fontFamily: 'Space Mono, monospace', fontSize: '14px', fontWeight: 500, lineHeight: '20px', letterSpacing: '0.16px', backgroundColor: '#667eea', color: '#ffffff'}}
+                  style={{
+                    fontFamily: 'Space Mono, monospace',
+                    fontSize: '14px',
+                    fontWeight: 500,
+                    lineHeight: '20px',
+                    letterSpacing: '0.16px',
+                    backgroundColor: '#667eea',
+                    color: '#ffffff',
+                  }}
                 >
-                  <span style={{color: '#ffffff'}}>{isSubmitting ? 'Getting access...' : 'Get early access'}</span>
+                  <span style={{ color: '#ffffff' }}>
+                    {isSubmitting ? 'Getting access...' : 'Get early access'}
+                  </span>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='16'
@@ -125,7 +201,7 @@ export default function AlphaFCPage() {
                 className='text-sm'
                 style={{
                   fontFamily: 'Space Mono, monospace',
-                  color: message.includes('Thanks') ? '#667eea' : '#ef4444'
+                  color: message.includes('Thanks') ? '#667eea' : '#ef4444',
                 }}
               >
                 {message}
@@ -139,9 +215,8 @@ export default function AlphaFCPage() {
               {/* iPhone Frame */}
               <div className='relative bg-black rounded-[3rem] p-2 shadow-2xl'>
                 <div className='bg-black rounded-[2.5rem] overflow-hidden'>
-                  
-                  <Image 
-                    src='/IMG_7374.PNG' 
+                  <Image
+                    src='/IMG_7374.PNG'
                     alt='Cakeshop App Interface'
                     width={280}
                     height={600}
@@ -149,7 +224,7 @@ export default function AlphaFCPage() {
                   />
                 </div>
               </div>
-              
+
               {/* iPhone Details */}
               <div className='absolute top-[1.5rem] left-1/2 transform -translate-x-1/2 w-[120px] h-[25px] bg-black rounded-full'></div>
               <div className='absolute top-[2rem] left-1/2 transform -translate-x-1/2 w-[50px] h-[4px] bg-gray-800 rounded-full'></div>
@@ -161,21 +236,35 @@ export default function AlphaFCPage() {
         {/* Footer with logo and social links */}
         <footer className='absolute bottom-0 left-0 right-0 p-4 md:p-6 flex justify-between items-center bg-black z-40 border-t border-gray-600'>
           <div className='flex items-center space-x-4 md:space-x-8 text-white'>
-            <div className='text-lg md:text-xl font-bold' style={{fontFamily: 'Space Mono, monospace', fontWeight: 700, color: '#667eea'}}>
-              <span style={{fontFamily: 'Press Start 2P, cursive', fontSize: '0.9em', color: '#667eea'}}>Cakeshop</span>
+            <div
+              className='text-lg md:text-xl font-bold'
+              style={{
+                fontFamily: 'Space Mono, monospace',
+                fontWeight: 700,
+                color: '#667eea',
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: 'Press Start 2P, cursive',
+                  fontSize: '0.9em',
+                  color: '#667eea',
+                }}
+              >
+                Cakeshop
+              </span>
             </div>
-            <a 
-              href="https://x.com/CakeshopApp" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className='cursor-pointer transition-colors text-sm md:text-base hover:opacity-80' 
-              style={{fontFamily: 'Space Mono, monospace', color: '#ffffff'}}
+            <a
+              href='https://x.com/CakeshopApp'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='cursor-pointer transition-colors text-sm md:text-base hover:opacity-80'
+              style={{ fontFamily: 'Space Mono, monospace', color: '#ffffff' }}
             >
               X
             </a>
           </div>
         </footer>
-
       </section>
     </main>
   );
