@@ -87,8 +87,8 @@ export default function AlphaFCPage() {
             >
               Buying BTC
               <br />
-              should be as easy as
-              <br />
+              should be as
+              <br /> easy as{' '}
               <span
                 className='font-normal'
                 style={{
@@ -118,7 +118,7 @@ export default function AlphaFCPage() {
                 color: '#667eea',
               }}
             >
-              Buy BTC.
+              Buy Bitcoin.
             </div>
             <div
               className='text-xl font-bold mb-2'
@@ -129,7 +129,7 @@ export default function AlphaFCPage() {
                 color: '#667eea',
               }}
             >
-              Build your savings.
+              Earn yield.{' '}
             </div>
             <div
               className='text-xl font-bold mb-8 md:mb-12'
@@ -140,7 +140,7 @@ export default function AlphaFCPage() {
                 color: '#667eea',
               }}
             >
-              Spend your wealth.
+              Build wealth.
             </div>
 
             {/* Email i nput and button */}
@@ -234,35 +234,48 @@ export default function AlphaFCPage() {
 
         {/* Gray divider */}
         {/* Footer with logo and social links */}
-        <footer className='absolute bottom-0 left-0 right-0 p-4 md:p-6 flex justify-between items-center bg-black z-40 border-t border-gray-600'>
-          <div className='flex items-center space-x-4 md:space-x-8 text-white'>
-            <div
-              className='text-lg md:text-xl font-bold'
-              style={{
-                fontFamily: 'Space Mono, monospace',
-                fontWeight: 700,
-                color: '#667eea',
-              }}
-            >
-              <span
+        <footer className='absolute bottom-0 left-0 right-0 p-4 md:p-6 bg-black z-40 border-t border-gray-600'>
+          <div className='flex justify-between items-center'>
+            <div className='flex items-center space-x-4 md:space-x-8 text-white'>
+              <div
+                className='text-lg md:text-xl font-bold'
                 style={{
-                  fontFamily: 'Press Start 2P, cursive',
-                  fontSize: '0.9em',
+                  fontFamily: 'Space Mono, monospace',
+                  fontWeight: 700,
                   color: '#667eea',
                 }}
               >
-                Cakeshop
-              </span>
+                <span
+                  style={{
+                    fontFamily: 'Press Start 2P, cursive',
+                    fontSize: '0.9em',
+                    color: '#667eea',
+                  }}
+                >
+                  Cakeshop
+                </span>
+              </div>
+              <a
+                href='https://x.com/CakeshopApp'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='cursor-pointer transition-colors text-sm md:text-base hover:opacity-80'
+                style={{
+                  fontFamily: 'Space Mono, monospace',
+                  color: '#ffffff',
+                }}
+              >
+                X
+              </a>
             </div>
-            <a
-              href='https://x.com/CakeshopApp'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='cursor-pointer transition-colors text-sm md:text-base hover:opacity-80'
-              style={{ fontFamily: 'Space Mono, monospace', color: '#ffffff' }}
+
+            {/* Copyright text */}
+            <div
+              className='text-xs text-gray-400'
+              style={{ fontFamily: 'Space Mono, monospace' }}
             >
-              X
-            </a>
+              Baked by Cakeshop Software Inc. © 2025
+            </div>
           </div>
         </footer>
       </section>
