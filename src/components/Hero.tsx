@@ -4,51 +4,51 @@ import RegisterForm from '@/components/RegisterForm';
 
 export default function Hero() {
   return (
-    <section className='min-h-screen flex items-center justify-center p-4 md:p-0'>
-      <div className='bg-gradient-to-br from-primary-50 via-primary-100 to-primary-200 text-primary-900 rounded-3xl shadow-2xl w-full max-w-6xl md:max-w-none overflow-hidden'>
-        <div className='layout flex flex-col md:flex-row items-center justify-between md:justify-center px-8 py-12 md:py-16'>
-          <div className='md:w-1/2 text-center md:text-left max-w-2xl mb-8 md:mb-0'>
+    <section className='min-h-screen flex items-center justify-center p-2 md:p-2'>
+      <div className='bg-white/5 backdrop-blur-xl border border-white/10 text-white rounded-3xl shadow-2xl w-full overflow-hidden p-2 md:p-6 transition-all duration-300'>
+        <div className='flex flex-col md:flex-row items-center justify-between px-6 py-12 md:py-16 gap-8 md:gap-12'>
+          <div className='md:w-3/5 text-center md:text-left mb-8 md:mb-0'>
             <div className='flex items-center justify-center md:justify-start mb-8'>
               <Image src='/cake4.png' alt="Cakeshop Logo" className="w-8 h-8 text-white mr-3" width={32} height={32} />
-              <h2 className='text-2xl md:text-3xl font-bold text-primary-800'>Cakeshop App</h2>
+              <h2 className='text-2xl md:text-3xl font-bold text-white text-shadow'>Cakeshop App</h2>
             </div>
-            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-primary-900'>
-              Buying BTC should be <span className='text-primary-600'>easy as CAKE!</span>
+            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-white text-shadow'>
+              Buying BTC should be <span className='text-primary-300'>easy as CAKE!</span>
             </h1>
-            <p className='text-lg md:text-xl mb-10 text-primary-700 leading-relaxed'>
+            <p className='text-lg md:text-xl mb-10 text-white/90 leading-relaxed'>
               Buy BTC, Build your Savings, and Spend it on anything you want!
             </p>
             <RegisterForm />
           </div>
-          <div className='hidden md:flex md:w-1/2 justify-center items-end mt-auto md:mt-0 pb-2 sm:pb-4'>
+          <div className='hidden md:flex md:w-2/5 justify-center items-end mt-auto md:mt-0 pb-2 sm:pb-4'>
             <div className='relative w-full max-w-[28rem] h-[28rem] sm:h-[28rem] md:h-[32rem] group'>
-              <div className='absolute -inset-10 bg-gradient-to-r from-primary-200/40 to-primary-300/40 rounded-[2rem] blur-2xl opacity-75 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none'></div>
+              <div className='absolute -inset-10 bg-white/10 backdrop-blur-xl rounded-[2rem] blur-2xl opacity-50 group-hover:opacity-75 transition-opacity duration-500 pointer-events-none'></div>
 
               {/* Left phone - hidden on mobile */}
               <Image
-                src='/IMG_7375.PNG'
+                src='/screenshots/s1.png'
                 alt='Wallet screen left'
                 width={300}
                 height={600}
-                className='hidden md:block absolute left-0 top-8 w-48 sm:w-56 lg:w-64 -translate-x-4 sm:-translate-x-6 rotate-[-9deg] z-10 opacity-95 drop-shadow-2xl rounded-3xl'
+                className='hidden md:block absolute border-2 border-gray-300 left-0 top-8 w-48 sm:w-56 lg:w-64 -translate-x-4 sm:-translate-x-6 rotate-[-9deg] z-10 opacity-95 drop-shadow-2xl rounded-3xl'
               />
 
               {/* Center phone (front) */}
               <Image
-                src='/IMG_7374.PNG'
+                src='/screenshots/s2.png'
                 alt='Wallet screen center'
                 width={320}
                 height={640}
-                className='absolute inset-x-0 mx-auto top-4 md:top-0 w-56 sm:w-64 lg:w-72 rotate-0 z-20 drop-shadow-2xl rounded-3xl'
+                className='border-2 border-gray-300 absolute inset-x-0 mx-auto top-4 md:top-0 w-56 sm:w-64 lg:w-72 rotate-0 z-20 drop-shadow-2xl rounded-3xl'
               />
 
               {/* Right phone - hidden on mobile */}
               <Image
-                src='/IMG_7375.PNG'
+                src='/screenshots/s3.png'
                 alt='Wallet screen right'
                 width={300}
                 height={600}
-                className='hidden md:block absolute right-0 top-12 w-48 sm:w-56 lg:w-64 translate-x-4 sm:translate-x-6 rotate-[9deg] z-10 opacity-95 drop-shadow-2xl rounded-3xl'
+                className='border-2 border-gray-300 hidden md:block absolute right-0 top-12 w-48 sm:w-56 lg:w-64 translate-x-4 sm:translate-x-6 rotate-[9deg] z-10 opacity-95 drop-shadow-2xl rounded-3xl'
               />
             </div>
           </div>
@@ -57,11 +57,11 @@ export default function Hero() {
         {/* Mobile: Three phones at bottom - cut off 30% */}
         <div className='md:hidden flex justify-center pt-0 pb-0 overflow-hidden'>
           <div className='relative w-full max-w-[20rem] h-[14rem] group'>
-            <div className='absolute -inset-6 bg-gradient-to-r from-primary-200/40 to-primary-300/40 rounded-[2rem] blur-2xl opacity-75 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none'></div>
+            <div className='absolute -inset-6 bg-white/10 backdrop-blur-xl rounded-[2rem] blur-2xl opacity-50 group-hover:opacity-75 transition-opacity duration-500 pointer-events-none'></div>
 
             {/* Left phone */}
             <Image
-              src='/IMG_7375.PNG'
+              src='/screenshots/s1.png'
               alt='Wallet screen left'
               width={300}
               height={600}
@@ -70,7 +70,7 @@ export default function Hero() {
 
             {/* Center phone (front) */}
             <Image
-              src='/IMG_7374.PNG'
+              src='/screenshots/s2.png'
               alt='Wallet screen center'
               width={320}
               height={640}
@@ -79,7 +79,7 @@ export default function Hero() {
 
             {/* Right phone */}
             <Image
-              src='/IMG_7375.PNG'
+              src='/screenshots/s3.png'
               alt='Wallet screen right'
               width={300}
               height={600}

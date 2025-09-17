@@ -17,12 +17,12 @@ export default function Navbar() {
       <div className="absolute inset-0 bg-white/5 backdrop-blur-xl border-b border-white/10 transition-all duration-300" />
 
       {/* Navbar content */}
-      <div className="relative max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Image src='/cake4.png' alt="Cakeshop Logo" className="w-8 h-8 text-white mr-3" width={32} height={32} />
-            <span className="text-xl font-bold text-white text-shadow-sm">Cakeshop</span>
+            <Image src='/cake4.png' alt="Cakeshop Logo" className="w-8 h-8 text-white mr-3 text-shadow-md" width={32} height={32} />
+            <span className="text-xl font-bold text-primary-300 text-shadow" style={{ fontFamily: 'var(--font-inter)' }}>Cakeshop Wallet</span>
           </div>
 
           {/* Desktop Navigation */}
