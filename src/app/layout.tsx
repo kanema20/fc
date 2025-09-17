@@ -8,6 +8,8 @@ import '@/styles/fonts.css';
 import '@/styles/colors.css';
 
 import { siteConfig } from '@/constant/config';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 const spaceMono = Space_Mono({
   subsets: ['latin'],
@@ -78,7 +80,9 @@ export default function RootLayout({
       <body
         className={`${spaceMono.variable} ${inter.variable} ${pressStart2P.variable}`}
       >
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
