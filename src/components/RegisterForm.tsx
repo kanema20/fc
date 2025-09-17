@@ -57,14 +57,14 @@ export default function RegisterForm() {
             onChange={(e) => setEmail(e.target.value)}
             disabled={isSubmitting}
             required
-            className='w-full px-4 py-3 bg-white/80 backdrop-blur-sm border-2 border-primary-200 rounded-xl font-spacemono text-sm text-primary-800 placeholder-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:bg-white hover:border-primary-300'
+            className='w-full px-4 py-3 bg-white/80 backdrop-blur-sm border-2 border-primary-200 rounded-xl font-spacemono text-sm text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:bg-white hover:border-primary-300'
             aria-describedby={message ? 'form-message' : undefined}
           />
         </div>
         <button
           type='submit'
           disabled={isSubmitting}
-          className='px-6 py-3 bg-primary-600 text-white font-spacemono font-bold text-sm rounded-xl hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:shadow-lg hover:shadow-primary-600/25 active:scale-95 whitespace-nowrap'
+          className='px-6 py-3 bg-primary-500 text-white font-spacemono font-bold text-sm rounded-xl hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:shadow-lg hover:shadow-primary-500/25 active:scale-95 whitespace-nowrap'
         >
           {isSubmitting ? 'Submitting...' : 'Join Waitlist'}
         </button>
@@ -73,8 +73,8 @@ export default function RegisterForm() {
         <p
           id='form-message'
           className={`mt-3 text-sm font-medium ${message.includes('Thanks')
-            ? 'text-green-600'
-            : 'text-red-600'
+            ? 'text-gray-900'
+            : 'text-gray-700'
             }`}
           role={message.includes('Thanks') ? 'status' : 'alert'}
         >

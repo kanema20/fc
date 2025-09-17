@@ -17,15 +17,16 @@ export default function Navbar() {
       <div className="absolute inset-0 bg-white/5 backdrop-blur-xl border-b border-white/10 transition-all duration-300" />
 
       {/* Navbar content */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
             <Image src='/cake4.png' alt="Cakeshop Logo" className="w-8 h-8 text-white mr-3" width={32} height={32} />
-            <span className="text-xl font-bold text-white">Cakeshop</span>
+            <span className="text-xl font-bold text-white text-shadow-sm">Cakeshop</span>
           </div>
 
           {/* Desktop Navigation */}
+          {/*
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               <a
@@ -54,11 +55,12 @@ export default function Navbar() {
               </a>
             </div>
           </div>
+          */}
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button className="bg-white/10 hover:bg-white/20 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 backdrop-blur-sm border border-white/20 hover:border-white/30">
-              Get Started
+            <button disabled className="disabled:opacity-50 disabled:cursor-not-allowed bg-white/10 hover:bg-white/20 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 backdrop-blur-sm border border-white/20 hover:border-white/30">
+              Coming Soon!
             </button>
           </div>
 

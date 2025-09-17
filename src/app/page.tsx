@@ -6,7 +6,7 @@ import Hero from '@/components/Hero';
 
 export default function AlphaFCPage() {
   return (
-    <main className='px-4 md:px-8 pt-16'>
+    <main className='px-4 md:px-4 pt-4'>
       <Hero />
     </main>
   );
