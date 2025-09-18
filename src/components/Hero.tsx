@@ -4,7 +4,7 @@ import RegisterForm from '@/components/RegisterForm';
 
 export default function Hero() {
   return (
-    <section className='min-h-screen flex items-center justify-center p-2 md:p-2'>
+    <section className='min-h-screen flex items-center justify-center p-2 md:p-2 pt-20 md:pt-2'>
       <div className='bg-white/5 backdrop-blur-xl border border-white/10 text-white rounded-3xl shadow-2xl w-full overflow-hidden p-2 md:p-6 transition-all duration-300'>
         <div className='flex flex-col md:flex-row items-center justify-between px-6 py-12 md:py-16 gap-8 md:gap-12'>
           <div className='md:w-3/5 text-center md:text-left mb-8 md:mb-0'>

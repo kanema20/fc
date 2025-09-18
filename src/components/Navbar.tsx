@@ -65,6 +65,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile menu button */}
+          {/* 
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
@@ -95,6 +96,7 @@ export default function Navbar() {
               </svg>
             </button>
           </div>
+          */}
         </div>
 
         {/* Mobile Navigation Menu */}
