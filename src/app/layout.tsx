@@ -80,7 +80,7 @@ export default function RootLayout({
       <body
         className={`${spaceMono.variable} ${inter.variable} ${pressStart2P.variable}`}
       >
-        <Navbar />
+
         {children}
         <Footer />
       </body>

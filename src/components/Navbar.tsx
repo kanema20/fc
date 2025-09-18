@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
       {/* Glass navbar background */}
-      <div className="absolute inset-0 bg-white/5 backdrop-blur-xl border-b border-white/10 transition-all duration-300" />
+      <div className="absolute inset-0 bg-white/5 backdrop-blur-xl border-b border-black/10 transition-all duration-300" />
 
       {/* Navbar content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,7 +22,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <Image src='/cake4.png' alt="Cakeshop Logo" className="w-8 h-8 text-white mr-3 text-shadow-md" width={32} height={32} />
-            <span className="text-xl font-bold text-primary-300 text-shadow-sm" style={{ fontFamily: 'var(--font-inter)' }}>Cakeshop</span>
+            <span className="text-xl font-bold text-gray-700" style={{ fontFamily: 'var(--font-inter)' }}>Cakeshop</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -59,7 +59,7 @@ export default function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button disabled className="disabled:opacity-50 disabled:cursor-not-allowed bg-white/10 hover:bg-white/20 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 backdrop-blur-sm border border-white/20 hover:border-white/30">
+            <button disabled className="disabled:opacity-50 disabled:cursor-not-allowed bg-primary-800/10 hover:bg-primary-800/20 text-primary-800 px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 backdrop-blur-sm border border-primary-800/20 hover:border-primary-800/30">
               Coming Soon!
             </button>
           </div>
@@ -102,37 +102,37 @@ export default function Navbar() {
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white/5 backdrop-blur-xl rounded-lg mt-2 border border-white/10">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white/5 backdrop-blur-xl rounded-lg mt-2 border border-black/10">
               <a
                 href="#features"
-                className="text-white/90 hover:text-white block px-3 py-2 text-base font-medium transition-colors duration-200"
+                className="text-primary-800/90 hover:text-primary-800 block px-3 py-2 text-base font-medium transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Features
               </a>
               <a
                 href="#about"
-                className="text-white/90 hover:text-white block px-3 py-2 text-base font-medium transition-colors duration-200"
+                className="text-primary-800/90 hover:text-primary-800 block px-3 py-2 text-base font-medium transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </a>
               <a
                 href="#download"
-                className="text-white/90 hover:text-white block px-3 py-2 text-base font-medium transition-colors duration-200"
+                className="text-primary-800/90 hover:text-primary-800 block px-3 py-2 text-base font-medium transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Download
               </a>
               <a
                 href="#support"
-                className="text-white/90 hover:text-white block px-3 py-2 text-base font-medium transition-colors duration-200"
+                className="text-primary-800/90 hover:text-primary-800 block px-3 py-2 text-base font-medium transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Support
               </a>
               <div className="pt-2">
-                <button className="w-full bg-white/10 hover:bg-white/20 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 backdrop-blur-sm border border-white/20 hover:border-white/30">
+                <button className="w-full bg-primary-800/10 hover:bg-primary-800/20 text-primary-800 px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 backdrop-blur-sm border border-primary-800/20 hover:border-primary-800/30">
                   Get Started
                 </button>
               </div>

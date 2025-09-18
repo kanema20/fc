@@ -52,7 +52,7 @@ export default function RegisterForm() {
           <input
             id='email'
             type='email'
-            placeholder='jdoe@example.com'
+            placeholder='satoshi.nakamoto@example.com'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             disabled={isSubmitting}
