@@ -22,7 +22,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <Image src='/cake4.png' alt="Cakeshop Logo" className="w-8 h-8 text-white mr-3 text-shadow-md" width={32} height={32} />
-            <span className="text-xl font-bold text-primary-300 text-shadow" style={{ fontFamily: 'var(--font-inter)' }}>Cakeshop Wallet</span>
+            <span className="text-xl font-bold text-primary-300 text-shadow-sm" style={{ fontFamily: 'var(--font-inter)' }}>Cakeshop</span>
           </div>
 
           {/* Desktop Navigation */}
