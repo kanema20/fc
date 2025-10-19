@@ -6,16 +6,16 @@ import Image from 'next/image';
 export default function Footer() {
   return (
     <footer className="glass-footer">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="flex flex-col md:flex-row justify-between gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
+        <div className="flex flex-col md:flex-row justify-between gap-4 sm:gap-6 md:gap-8">
           {/* Brand Section */}
           <div className="md:flex-1">
-            <div className="flex items-center mb-4">
+            <div className="flex items-center mb-2 sm:mb-3 md:mb-4">
               <Image src='/cake4.png' alt="Cakeshop Logo" className="w-8 h-8 text-white mr-3" width={32} height={32} />
-              <span className="text-xl font-bold text-black">Cakeshop</span>
+              <span className="text-lg sm:text-xl font-bold text-black">Cakeshop App</span>
             </div>
-            <p className="text-black/70 text-sm leading-relaxed">
-              {`Buy BTC, Build your Savings, and Spend it on anything you want!`}
+            <p className="text-black/70 text-xs sm:text-sm leading-relaxed">
+              {`Investing in crypto should be easy. Cakeshop simplifies the process and gives you access to real yields from DeFi applications. Support for additional tokens and networks coming soon...`}
             </p>
           </div>
 
@@ -26,30 +26,36 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-12 pt-8 border-t border-black/10">
+        <div className="mt-6 sm:mt-8 lg:mt-12 pt-4 sm:pt-6 lg:pt-8 border-t border-black/10">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
-              <p className="text-black/70 text-sm">
+              <p className="text-black/70 text-xs sm:text-sm">
                 Baked by Cakeshop Software Inc. © 2025
               </p>
-              <div className="flex space-x-6">
+              <div className="flex space-x-3 sm:space-x-4 md:space-x-6">
                 <a
                   href="#privacy"
-                  className="text-black/70 hover:text-black text-sm transition-colors duration-200"
+                  className="text-black/70 hover:text-black text-xs sm:text-sm transition-colors duration-200"
                 >
                   Privacy Policy
                 </a>
                 <a
                   href="#terms"
-                  className="text-black/70 hover:text-black text-sm transition-colors duration-200"
+                  className="text-black/70 hover:text-black text-xs sm:text-sm transition-colors duration-200"
                 >
                   Terms of Service
                 </a>
                 <a
                   href="#cookies"
-                  className="text-black/70 hover:text-black text-sm transition-colors duration-200"
+                  className="text-black/70 hover:text-black text-xs sm:text-sm transition-colors duration-200"
                 >
                   Cookie Settings
+                </a>
+                <a
+                  href="#faq"
+                  className="text-black/70 hover:text-black text-xs sm:text-sm transition-colors duration-200"
+                >
+                  FAQ
                 </a>
               </div>
             </div>
