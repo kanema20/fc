@@ -1,7 +1,7 @@
 'use client';
 
-import * as React from 'react';
 import Image from 'next/image';
+import * as React from 'react';
 
 export default function Footer() {
   return (
@@ -15,7 +15,7 @@ export default function Footer() {
               <span className="text-lg sm:text-xl font-bold text-black">Cakeshop App</span>
             </div>
             <p className="text-black/70 text-xs sm:text-sm leading-relaxed">
-              {`Investing in crypto should be easy. Cakeshop simplifies the process and gives you access to real yields from DeFi applications. Support for additional tokens and networks coming soon...`}
+              Investing in crypto should be easy. Cakeshop simplifies the process and gives you access to real yields from DeFi applications. Support for additional tokens and networks coming soon...
             </p>
           </div>
 
@@ -33,30 +33,30 @@ export default function Footer() {
                 Baked by Cakeshop Software Inc. © 2025
               </p>
               <div className="flex space-x-3 sm:space-x-4 md:space-x-6">
-                <a
+                {/* <a
                   href="#privacy"
                   className="text-black/70 hover:text-black text-xs sm:text-sm transition-colors duration-200"
                 >
                   Privacy Policy
-                </a>
-                <a
+                </a> */}
+                {/* <a
                   href="#terms"
                   className="text-black/70 hover:text-black text-xs sm:text-sm transition-colors duration-200"
                 >
                   Terms of Service
-                </a>
-                <a
+                </a> */}
+                {/* <a
                   href="#cookies"
                   className="text-black/70 hover:text-black text-xs sm:text-sm transition-colors duration-200"
                 >
                   Cookie Settings
-                </a>
-                <a
+                </a> */}
+                {/* <a
                   href="#faq"
                   className="text-black/70 hover:text-black text-xs sm:text-sm transition-colors duration-200"
                 >
                   FAQ
-                </a>
+                </a> */}
               </div>
             </div>
 
