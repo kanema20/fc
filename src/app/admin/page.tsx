@@ -152,9 +152,32 @@ export default function AdminPage() {
               <h2 className='text-xl font-semibold text-white'>
                 Email Signups
               </h2>
-              <span className='bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium'>
-                {signups.length} total
-              </span>
+              <div className='flex items-center gap-3'>
+                <span className='bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium'>
+                  {signups.length} total
+                </span>
+                <button
+                  onClick={downloadCSV}
+                  disabled={signups.length === 0}
+                  className='bg-green-600 hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-4 py-1 rounded-lg text-sm font-medium transition-colors flex items-center gap-2'
+                >
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    className='h-4 w-4'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke='currentColor'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth={2}
+                      d='M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'
+                    />
+                  </svg>
+                  Download CSV
+                </button>
+              </div>
             </div>
           </div>
 
